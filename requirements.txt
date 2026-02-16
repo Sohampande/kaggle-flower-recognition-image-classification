@@ -1,0 +1,3 @@
+# we will be using this file to indicate all the enviormental requirements for
+#      our files. 
+
