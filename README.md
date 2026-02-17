@@ -11,4 +11,16 @@ this project as much as I can.
 - I am also not adding the enviornment files here, (ie venv folder). But any changes made to the enviorment, I will be tracking here.
 
 ## How to get started : 
-- Before you start, you will need to create an python enviornment. 
+1. Clone the Repo :
+   '''bash
+   https://github.com/Sohampande/kaggle-flower-recognition-image-classification
+   '''
+
+2. Install the requirements :
+   '''bash
+   pip install -r requirements.txt
+   '''
+   '''bash
+   # To run the file, use this command :
+   python app.py
+   '''
