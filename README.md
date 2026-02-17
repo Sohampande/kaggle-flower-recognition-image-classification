@@ -12,15 +12,16 @@ this project as much as I can.
 
 ## How to get started : 
 1. Clone the Repo :
-   '''bash
+   ```bash
    https://github.com/Sohampande/kaggle-flower-recognition-image-classification
-   '''
+   ```
 
 2. Install the requirements :
-   '''bash
+   ```bash
    pip install -r requirements.txt
-   '''
-   '''bash
+   ```
+   
+   ```bash
    # To run the file, use this command :
    python app.py
-   '''
+   ```
