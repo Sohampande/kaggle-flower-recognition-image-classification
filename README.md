@@ -1,10 +1,11 @@
 # PROJECT SUMMARY : 
 
-In this project I am making a simple image classification model with PyTorch for the dataset sourced from 
-this [site](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition/data). I have copied a lot of the project structure and formatting from the [GOAT](https://github.com/krishnaik06). Spcifically, I am using [this project](https://www.youtube.com/watch?v=86BKEv0X2xU&t=501s) to follow the templates.
+In this project I am making a simple image classification model with PyTorch to identify different types of flowers nameley: daisy, dandelion, rose, sunflower, tulip. Thus, the goal of this project is to build a flower image classifier.
 
-Thus, the goal of this project is to build a flower image classifier. As time goes, I will continue to update
-this project as much as I can. 
+I have copied a lot of the project structure and formatting from the [GOAT](https://github.com/krishnaik06). Spcifically, I am using [this project](https://www.youtube.com/watch?v=86BKEv0X2xU&t=501s) to follow the templates.
+
+I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition/data). For now, I have downloaded the dataset fromt he source and then using it.
+
 
 ## Some Important Notes : 
 - I have not added the dataset here because it takes up a lot of space int the repo. But, by downloading it from the given link above it should be okay.

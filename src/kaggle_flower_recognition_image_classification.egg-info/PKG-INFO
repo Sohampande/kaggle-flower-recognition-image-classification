@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: kaggle-flower-recognition-image-classification
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/Sohampande/kaggle-flower-recognition-image-classification
+Author: Sohampande
+Author-email: sohampande58@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: summary
+
+# PROJECT SUMMARY : 
+
+In this project I am making a simple image classification model with PyTorch for the dataset sourced from 
+this [site](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition/data). 
+
+Thus, the goal of this project is to build a flower image classifier. As time goes, I will continue to update
+this project as much as I can. 

@@ -3,7 +3,7 @@
 
 import setuptools
 
-with open('README.md', "r", encoding='utf-8') as f:
+with open("README.md", "r", encoding='utf-8') as f:
     long_discription = f.read()
 
 __version__ = "0.0.0"
@@ -24,10 +24,10 @@ setuptools.setup(
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
     description="A small python package for CNN app",
-    long_description=long_description,
+    long_description=long_discription,
     long_description_context="text/markdown",
-    url=f"https://github.com/Sohampande/kaggle-flower-recognition-image-classification"
-    project_url={
+    url=f"https://github.com/Sohampande/kaggle-flower-recognition-image-classification",
+    project_urs={
         "Bug Tracker" : f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues"
     },
     package_dir={"":"src"},
