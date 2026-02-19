@@ -6,7 +6,6 @@ I have copied a lot of the project structure and formatting from the [GOAT](http
 
 I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition/data). For now, I have downloaded the dataset fromt he source and then using it.
 
-
 ## Some Important Notes : 
 - I have not added the dataset here because it takes up a lot of space int the repo. But, by downloading it from the given link above it should be okay.
 - I am also not adding the enviornment files here, (ie venv folder). But any changes made to the enviorment, I will be tracking here.
