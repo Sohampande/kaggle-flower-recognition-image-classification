@@ -15,7 +15,7 @@ I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/
 For each step :
       1. read config.yaml In the config.yaml file, I have all the necessary data stored. There we also have the location from which data needs to be downloaded and where it needs to be downloaded. 
 
-      2. Update params.yaml :
+      2. 
 
 ## How to get started : 
 1. Clone the Repo :
