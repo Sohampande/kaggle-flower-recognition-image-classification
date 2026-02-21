@@ -12,9 +12,18 @@ I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/
 - ** Managing Data ** : Through data ingestion, the pipeline should be able to download the data the local file for training. I am downloading the data from the kaggle source that I have mentioned above.
 
 ## How does it work : 
-      1. In the config.yaml file, I have all the necessary data stored. There we also have the location from which data needs to be downloaded and where it needs to be downloaded. 
+For each step : 
+      1. **read config.yaml** In the config.yaml file, I have all the necessary data stored. There we also have the location from which data needs to be downloaded and where it needs to be downloaded. 
       
-      2. We read the file 
+      2. **Update secrets.yaml** : 
+      3. **Update params.yaml** : 
+      4. **Update the entity** : 
+      5. **Update the configuration manager in src config** : 
+      6. **Update the components** : 
+      7. **Update the pipeline** : 
+      8. **Update the main.py** : 
+      9. **Update the dvc.yaml** : 
+      10. **app.py**
 
 ## How to get started : 
 1. Clone the Repo :
