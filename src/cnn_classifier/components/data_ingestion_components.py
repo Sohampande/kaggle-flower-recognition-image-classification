@@ -1,9 +1,8 @@
-from src.cnn_classifier.utils.logger import logger
+from src.cnn_classifier.utils import logger
 import kagglehub
 import kaggle
 import os
 from src.cnn_classifier.entity.config_entity import DataIngestionConfig
-
 
 class DataIngestion:
     def __init__(self, config : DataIngestionConfig):
