@@ -16,4 +16,6 @@ torch
 dvc
 python-box==6.0.2
 setuptools
+kagglehub
+kaggle
 -e .

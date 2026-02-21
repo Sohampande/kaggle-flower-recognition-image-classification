@@ -1,10 +1,10 @@
 import os
 from box.exceptions import BoxValueError
 import yaml
-from cnnClassifier import logger 
+from cnn_classifier.utils.logger import logger
 import json
 import joblib
-from ensure import ensure_applications 
+from ensure import ensure_annotations 
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
@@ -36,7 +36,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
     try: 
         with open(path_to_yaml) as yaml_files:
-            content = yaml.sage_load(yaml_file)
+            content = yaml.safe_load(yaml_files)
             logger.info(f"yaml file {path_to_yaml} loaded successfully")
             return ConfigBox(content)
     except BoxValueError:
@@ -44,7 +44,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     except Exception as e:
         raise e
 
-@ensure_anotations
+@ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     '''create list of directories
 

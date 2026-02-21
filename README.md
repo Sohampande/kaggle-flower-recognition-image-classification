@@ -9,6 +9,12 @@ I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/
 ## Some Important Notes : 
 - I have not added the dataset here because it takes up a lot of space int the repo. But, by downloading it from the given link above it should be okay.
 - I am also not adding the enviornment files here, (ie venv folder). But any changes made to the enviorment, I will be tracking here.
+- ** Managing Data ** : Through data ingestion, the pipeline should be able to download the data the local file for training. I am downloading the data from the kaggle source that I have mentioned above.
+
+## How does it work : 
+      1. In the config.yaml file, I have all the necessary data stored. There we also have the location from which data needs to be downloaded and where it needs to be downloaded. 
+      
+      2. We read the file 
 
 ## How to get started : 
 1. Clone the Repo :

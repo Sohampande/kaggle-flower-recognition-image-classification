@@ -1,0 +1,10 @@
+# This file primarly exists to store variables, paths, etc
+#   So that we dont hard-code these into our project.
+
+artifacts_root : artifacts 
+
+data_ingestion : 
+  root_dir : artifacts/data_ingestion
+  local_data_file : artifacts/data_ingestion/flowers
+  root_dataset_name : 'alxmamaev/flowers-recognition'
+
