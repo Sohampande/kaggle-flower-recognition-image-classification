@@ -17,6 +17,12 @@ For each step :
 
       2. 
 
+## Different Models : 
+      1. In this project, I have developed several different types of models. These models have been tested for the training data, and the best one has been selected. All the models I have made are in src/cnn_classifier/models/ . Here, I have given a general list of all the models that I have created. For further details, have a look into the models. The list of models is : 
+         
+         A. Multilayer Perceptron : 
+         B. 
+
 ## How to get started : 
 1. Clone the Repo :
    ```bash
