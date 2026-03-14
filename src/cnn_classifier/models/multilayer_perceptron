@@ -1,0 +1,21 @@
+import torch
+import torch.nn as nn
+
+'''
+This file contains the code for the multilayer percptron.
+
+The model architechture is vary simple :
+        Linear Layer -> tanh (activation layer) -> Linear Layer -> Softmax
+
+We use Softmax here to ensure that we get the output as probabilites.
+
+
+'''
+
+model_mlp = nn.Sequential(
+    nn.Linear(3072, 512),
+    nn.Tanh(),
+    nn.Linear(512, 2),
+    nn.LogSoftmax(dim=1)
+)
+
