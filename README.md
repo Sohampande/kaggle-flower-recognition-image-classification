@@ -20,8 +20,20 @@ For each step :
 ## Different Models : 
       1. In this project, I have developed several different types of models. These models have been tested for the training data, and the best one has been selected. All the models I have made are in src/cnn_classifier/models/ . Here, I have given a general list of all the models that I have created. For further details, have a look into the models. The list of models is : 
          
-         A. Multilayer Perceptron : 
+         A. Multilayer Perceptron 
          B. 
+
+# WorkFlow : 
+   1. Update config.yaml
+   2. Update secrets.yaml
+   3. Update params.yaml
+   4. Update the entity
+   5. Update teh configuration Manager in src config
+   6. Update the components
+   7. Update the pipeline
+   8. Update main.py
+   9. Update the dvc.yaml
+   10. app.py
 
 ## How to get started : 
 1. Clone the Repo :

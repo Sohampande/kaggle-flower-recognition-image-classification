@@ -25,9 +25,9 @@ setuptools.setup(
     author_email=AUTHOR_EMAIL,
     description="A small python package for CNN app",
     long_description=long_discription,
-    long_description_context="text/markdown",
+    long_description_content_type="text/markdown",
     url=f"https://github.com/Sohampande/kaggle-flower-recognition-image-classification",
-    project_urs={
+    project_urls={
         "Bug Tracker" : f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues"
     },
     package_dir={"":"src"},
