@@ -21,10 +21,9 @@ For each step :
    2. **Data Transformation** : reads the data from artifacts/data_ingestion/flowers using CustomImageDataset. Then it gets the names from folder names and splits the data for train/eval/test. Note, we use augmentation only on training data so that the model prevents overfitting. By the end of this stage, we output the train_loader, val_loader, test_loader, class_names, and dataset_sizes. 
 
    3. **Model Preparation** : In this step, using the components from the previous step we, we prepare our model for training. This means : (1) we define critical variables such as learning_rate, no of epochs, weight_decay, etc. (2) In this step we also define a very important file called the model_factory.py which improves model retirval and makes for cleaner code. 
-
    In this step, we make many important design choices, these are : 
       - weight_decay : 0.0001 because L2 regularization is another layer in the code that should not be hard-coded.
-      
+
    4. **Model Training** :
    5. model evaluation 
    6. model selection 
