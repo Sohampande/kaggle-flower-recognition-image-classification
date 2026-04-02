@@ -24,7 +24,7 @@ For each step :
    In this step, we make many important design choices, these are : 
       - weight_decay : 0.0001 because L2 regularization is another layer in the code that should not be hard-coded.
 
-   4. **Model Training** :
+   4. **Model Training** : In this section, (1) we load the dataloaders, (2) get the model/criterion/etc from the model preparation, (3) run epoch loop, (4) compute train/val metrics, (5) save the best model.
    5. model evaluation 
    6. model selection 
    7. prediction pipeline 

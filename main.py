@@ -1,13 +1,17 @@
 from src.cnn_classifier.components.model_preparation import ModelPreparation
+from src.cnn_classifier.pipeline.stage_03_model_preparation import ModelPreparationTrainingPipeline
 from src.cnn_classifier.config.configuration import ConfigurationManager
+from src.cnn_classifier.utils import logger
 
-configman = ConfigurationManager() 
-config = configman.get_model_preparation_config()
-prep = ModelPreparation(config)
-model, criterion, optimizer, scheduler, device = prep.initiate_model_preparation()
+STAGE_NAME = "MODEL PREPARATION STAGE"
 
-print(model)
-print(criterion)
-print(optimizer)
-print(scheduler)
-print(device)
+
+if __name__ == "__main__":
+    try:
+        logger.info(f">>>>>> stage started <<<<<< : {STAGE_NAME}")
+        obj = ModelPreparationTrainingPipeline()
+        obj.main()
+        logger.info(f">>>>>> stage completed <<<<<< : {STAGE_NAME}")
+    except Exception as e:
+        logger.exception(e)
+        raise e
