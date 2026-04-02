@@ -20,10 +20,8 @@ For each step :
    2. **Data Ingestion** : reads the data from artifacts/data_ingestion/flowers using CustomImageDataset. Then it gets the names from folder names and splits the data for train/eval/test. Note, we use augmentation only on training data so that the model prevents overfitting. By the end of this stage, we output the train_loader, val_loader, test_loader, class_names, and dataset_sizes. 
 
 ## Different Models : 
-      1. In this project, I have developed several different types of models. These models have been tested for the training data, and the best one has been selected. All the models I have made are in src/cnn_classifier/models/ . Here, I have given a general list of all the models that I have created. For further details, have a look into the models. The list of models is : 
-         
-         A. Multilayer Perceptron 
-         B. 
+   1. In this project, I have developed several different types of models. These models have been tested for the training data, and the best one has been selected. All the models I have made are in src/cnn_classifier/models/ . Here, I have given a general list of all the models that I have created. For further details, have a look into the models. The list of models is : 
+      - Multilayer Perceptron 
 
 # WorkFlow : 
    1. Update config.yaml
