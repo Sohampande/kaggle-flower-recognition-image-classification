@@ -12,12 +12,24 @@ I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/
 - ** Managing Data ** : Through data ingestion, the pipeline should be able to download the data the local file for training. I am downloading the data from the kaggle source that I have mentioned above.
 - config.yaml : is a file that only stores paths and artifact locations such as : artifact root, raw data location, saved model paths, metrics path, plots paths, etc. 
 - params.yaml : we put the experiment settings here like the image size, batch size epochs, etc. Have a look at the file for the comprehensive list. 
+- Im using a MacbookPro, where I can run the code on gpu(aka mps). If this is a feature not available, then simply go to config/config.yaml and set model_preparation.device = cpu.
 
 ## How does it work : 
 For each step :
-   1. read config.yaml In the config.yaml file, I have all the necessary data stored. There we also have the location from which data needs to be downloaded and where it needs to be downloaded. 
+   1. **Data Ingestion** : read config.yaml In the config.yaml file, I have all the necessary data stored. There we also have the location from which data needs to be downloaded and where it needs to be downloaded. 
 
-   2. **Data Ingestion** : reads the data from artifacts/data_ingestion/flowers using CustomImageDataset. Then it gets the names from folder names and splits the data for train/eval/test. Note, we use augmentation only on training data so that the model prevents overfitting. By the end of this stage, we output the train_loader, val_loader, test_loader, class_names, and dataset_sizes. 
+   2. **Data Transformation** : reads the data from artifacts/data_ingestion/flowers using CustomImageDataset. Then it gets the names from folder names and splits the data for train/eval/test. Note, we use augmentation only on training data so that the model prevents overfitting. By the end of this stage, we output the train_loader, val_loader, test_loader, class_names, and dataset_sizes. 
+
+   3. **Model Preparation** : In this step, using the components from the previous step we, we prepare our model for training. This means : (1) we define critical variables such as learning_rate, no of epochs, weight_decay, etc. (2) In this step we also define a very important file called the model_factory.py which improves model retirval and makes for cleaner code. 
+
+   In this step, we make many important design choices, these are : 
+      - weight_decay : 0.0001 because L2 regularization is another layer in the code that should not be hard-coded.
+      
+   4. **Model Training** :
+   5. model evaluation 
+   6. model selection 
+   7. prediction pipeline 
+   8. deployment.
 
 ## Different Models : 
    1. In this project, I have developed several different types of models. These models have been tested for the training data, and the best one has been selected. All the models I have made are in src/cnn_classifier/models/ . Here, I have given a general list of all the models that I have created. For further details, have a look into the models. The list of models is : 
@@ -33,17 +45,7 @@ For each step :
    7. Update the pipeline
    8. Update main.py
    9. Update the dvc.yaml
-   10. app.py
-
-# Order For Creation : 
-1. data ingestion 
-2. data transformation 
-3. model preparation 
-4. model training
-5. model evaluation 
-6. model selection 
-7. prediction pipeline 
-8. deployment. 
+   10. app.py 
 
 ## How to get started : 
 1. Clone the Repo :

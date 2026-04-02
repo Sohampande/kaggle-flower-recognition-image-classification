@@ -2,6 +2,7 @@ from src.cnn_classifier.constants import *
 from src.cnn_classifier.utils.common import read_yaml, create_directories
 from src.cnn_classifier.entity.config_entity import DataIngestionConfig
 from src.cnn_classifier.entity.config_entity import DataTransformationConfig
+from src.cnn_classifier.entity.config_entity import ModelPreparationConfig
 import os
 
 class ConfigurationManager():
@@ -45,4 +46,20 @@ class ConfigurationManager():
             mean=list(config.mean),
             std=list(config.std),
             seed=config.seed
+        )
+    
+    def get_model_preparation_config(self) -> ModelPreparationConfig:
+        config = self.config.model_preparation
+
+        return ModelPreparationConfig(
+            model_name = config.model_name,
+            num_classes = config.num_classes,
+            learning_rate = config.learning_rate,
+            weight_decay = config.weight_decay,
+            optimizer_name = config.optimizer_name,
+            scheduler_name = config.scheduler_name,
+            step_size = config.step_size,
+            gamma = config.gamma,
+            device = config.device,
+            model_dir = Path("artifacts/model_preparation")
         )

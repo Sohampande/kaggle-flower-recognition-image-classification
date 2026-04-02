@@ -1,12 +1,13 @@
-from src.cnn_classifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
-from src.cnn_classifier.utils import logger
+from src.cnn_classifier.components.model_preparation import ModelPreparation
+from src.cnn_classifier.config.configuration import ConfigurationManager
 
-STAGE_NAME = 'Data Ingestion Step'
+configman = ConfigurationManager() 
+config = configman.get_model_preparation_config()
+prep = ModelPreparation(config)
+model, criterion, optimizer, scheduler, device = prep.initiate_model_preparation()
 
-try:
-    logger.info(f'>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<')
-    obj = DataIngestionTrainingPipeline()
-    obj.main()
-    logger.info(f'>>>>>>>>> stage {STAGE_NAME} completed <<<<<<<<<<')
-except Exception as e:
-    raise e
+print(model)
+print(criterion)
+print(optimizer)
+print(scheduler)
+print(device)

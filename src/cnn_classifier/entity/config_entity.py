@@ -21,3 +21,15 @@ class DataTransformationConfig:
     mean: list[float]
     std: list[float]
     seed: int
+@dataclass
+class ModelPreparationConfig:
+    model_name: str
+    num_classes: int
+    learning_rate: float
+    weight_decay: float
+    optimizer_name: str
+    scheduler_name: str
+    step_size: int
+    gamma: float
+    device: str
+    model_dir: Path
