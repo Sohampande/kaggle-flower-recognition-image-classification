@@ -1,7 +1,8 @@
 from src.cnn_classifier.constants import *
 from src.cnn_classifier.utils.common import read_yaml, create_directories
 from src.cnn_classifier.entity.config_entity import DataIngestionConfig
-from src.cnnClassifier.entity.config_entity import DataTransformationConfig
+from src.cnn_classifier.entity.config_entity import DataTransformationConfig
+import os
 
 class ConfigurationManager():
     def __init__(

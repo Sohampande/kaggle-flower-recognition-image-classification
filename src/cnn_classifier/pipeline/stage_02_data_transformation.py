@@ -1,7 +1,6 @@
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier.components.data_transformation import DataTransformation
-from src.cnnClassifier import logger
-
+from src.cnn_classifier.config.configuration import ConfigurationManager
+from src.cnn_classifier.components.data_transformation_components import DataTransformation
+from src.cnn_classifier.utils import logger
 
 STAGE_NAME = "Data Transformation Stage"
 

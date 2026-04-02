@@ -8,14 +8,17 @@ scipy
 joblib
 mlflow==2.2.2
 seaborn
-pyYAML
+PyYAML
 ensure==1.0.2
 Flask
 Flask-Cors
 torch
+torchvision
 dvc
 python-box==6.0.2
 setuptools
 kagglehub
 kaggle
+joblib
+python-box
 -e .

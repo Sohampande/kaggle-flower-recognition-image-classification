@@ -12,12 +12,12 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     class_names_path: Path
-    image_size: Tuple[int, int]
+    image_size: tuple[int, int]
     batch_size: int
     num_workers: int
     train_ratio: float
     val_ratio: float
     test_ratio: float
-    mean: List[float]
-    std: List[float]
+    mean: list[float]
+    std: list[float]
     seed: int

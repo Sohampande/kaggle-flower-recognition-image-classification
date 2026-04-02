@@ -6,8 +6,8 @@ import torch
 from torch.utils.data import DataLoader, random_split, Subset
 from torchvision import transforms
 
-from src.utils import logger
-from src.cnnClassifier.components.dataset import CustomImageDataset
+from src.cnn_classifier.utils import logger
+from src.cnn_classifier.components.dataset import CustomImageDataset
 
 @dataclass
 class DataTransformationArtifact : 
@@ -17,13 +17,13 @@ class DataTransformationArtifact :
     class_names : list
     dataset_sizes: dict
 
-class DataTransformations : 
+class DataTransformation : 
     def __init__(self, config):
         self.config = config
     
     def get_transforms(self):
         train_transform = transforms.Compose([
-            transforms.Resizs(self.config.image_size),
+            transforms.Resize(self.config.image_size),
             transforms.RandomHorizontalFlip(),
             transforms.RandomRotation(10),
             transforms.ToTensor(),
@@ -57,6 +57,7 @@ class DataTransformations :
         total_size = len(full_dataset)
         train_size = int( self.config.train_ratio * total_size)
         eval_size = int(self.config.val_ratio * total_size)
+        val_size = int(self.config.val_ratio * total_size)
         test_size = total_size - train_size - val_size
 
         logger.info(f"Total dataset size : {total_size}")
@@ -64,15 +65,20 @@ class DataTransformations :
 
         generator = torch.Generator().manual_seed(self.config.seed)
 
+        
+        # Splits the datasets into train, val, test subsets.
         train_subset, val_subset, test_subset = random_split(
             full_dataset, 
             [train_size, val_size, test_size],
             generator=generator
+        )
         
-        # Create separate datasets with transforms
+        # Create separate datasets with transforms 
         train_dataset_full = CustomImageDataset(root_dir=root_dir, transform=train_transform)
         eval_dataset_full = CustomImageDataset(root_dir=root_dir, transform=eval_transform)
+        # These variables contain the dataset with the transforms for train and test applied respt.
 
+        # We finally create the desired datasets with the applied transforms + the respective indicies.
         train_dataset = Subset(train_dataset_full, train_subset.indices)
         val_dataset = Subset(eval_dataset_full, val_subset.indices)
         test_dataset = Subset(eval_dataset_full, test_subset.indices)
@@ -109,6 +115,9 @@ class DataTransformations :
         }
 
         logger.info("Data transformation completed successfully")
+
+        # Note, we dont save the dataloader. But we create an abstract class and will be passing it
+        #           onto the next stage.
 
         return DataTransformationArtifact(
             train_loader=train_loader,
