@@ -19,9 +19,6 @@ artifacts/
 
 models
 *.pth
-*.png
 
 #data 
 data/
-*.jpg
-*.png
