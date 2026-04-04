@@ -1,0 +1,46 @@
+# This file primarly exists to store variables, paths, etc
+#   So that we dont hard-code these into our project.
+
+artifacts_root : artifacts 
+
+data_ingestion : 
+  root_dir : artifacts/data_ingestion
+  local_data_file : artifacts/data_ingestion/flowers
+  root_dataset_name : 'alxmamaev/flowers-recognition'
+  unzip_dir : artifacts/data_ingestion/flowers
+
+prepare_base_model : 
+  root_dir : artifacts/prepare_base_model
+  base_model_path : artifacts/prepare_base_model/base_model.h5
+  updated_base_model_path : artifacts/prepare_base_model/base_model_updated.h5
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  class_names_path: artifacts/data_transformation/class_names.json
+  image_size: [128, 128]
+  batch_size: 32
+  num_workers: 2
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  mean: [0.5, 0.5, 0.5]
+  std: [0.5, 0.5, 0.5]
+  seed: 42
+
+model_preparation : 
+  model_name: residual
+  num_classes : 5
+  learning_rate : 0.001
+  weight_decay : 0.0001
+  optimizer_name : adam
+  scheduler_name : steplr
+  step_size : 5
+  gamma : 0.1
+  device : mps
+
+model_training:
+  root_dir: artifacts/model_training
+  trained_model_path: artifacts/model_training/last_model.pth
+  best_model_path: artifacts/model_training/best_model.pth
+  metrics_file_path: artifacts/model_training/metrics.json
+  history_file_path: artifacts/model_training/history.json

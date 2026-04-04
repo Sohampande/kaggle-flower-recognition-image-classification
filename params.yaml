@@ -1,0 +1,12 @@
+training:
+  num_epochs: 10
+  device: mps
+
+models:
+  model_names:
+    - baseline
+    - width
+    - dropout
+    - batchnorm
+    - depth
+    - residual

@@ -1,0 +1,24 @@
+# we will be using this file to indicate all the enviormental requirements for
+#      our files. 
+
+pandas
+numpy
+matplotlib
+scipy
+joblib
+mlflow==2.2.2
+seaborn
+PyYAML
+ensure==1.0.2
+Flask
+Flask-Cors
+torch
+torchvision
+dvc
+python-box==6.0.2
+setuptools
+kagglehub
+kaggle
+joblib
+python-box
+-e .
