@@ -32,7 +32,7 @@ For each step :
 
    6. **Model Selection** : Using the data from model evaluation, the following graph can be generated : 
 
-   ![Alt Text][/Users/Soham/Documents/Projects/kaggle-flower-recognition-image-classification/artifacts/model_selection/model_comparison.png]
+   ![Model comparison](artifacts/model_selection/model_comparison.png)
 
    From the above image, we can see that the best performing models are dropout and bacthnorm. The models baseline and width overfit the data, and hence perfom poorly in testing. By a small margin, dropout beats batchnorm.
 
