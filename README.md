@@ -9,7 +9,7 @@ I am using the dataset sourced from this [site](https://www.kaggle.com/datasets/
 ## Some Important Notes : 
 - I have not added the dataset here because it takes up a lot of space int the repo. But, by downloading it from the given link above it should be okay.
 - I am also not adding the enviornment files here, (ie venv folder). But any changes made to the enviorment, I will be tracking here.
-- ** Managing Data ** : Through data ingestion, the pipeline should be able to download the data the local file for training. I am downloading the data from the kaggle source that I have mentioned above.
+- **Managing Data** : Through data ingestion, the pipeline should be able to download the data the local file for training. I am downloading the data from the kaggle source that I have mentioned above.
 - config.yaml : is a file that only stores paths and artifact locations such as : artifact root, raw data location, saved model paths, metrics path, plots paths, etc. 
 - params.yaml : we put the experiment settings here like the image size, batch size epochs, etc. Have a look at the file for the comprehensive list. 
 - Im using a MacbookPro, where I can run the code on gpu(aka mps). If this is a feature not available, then simply go to config/config.yaml and set model_preparation.device = cpu.
